@@ -1,0 +1,170 @@
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+}
+.container {
+  display: grid;
+  grid-template-columns: 3fr 7fr;
+  width: 100vw;
+  height: 100vh;
+}
+.container > #sidebar {
+  background: #f2f2f2;
+  grid-column: -3/-2;
+}
+.container > #sidebar > .modal > label {
+  font-weight: 650;
+  width: 200px;
+  text-align: center;
+  font-size: 2rem;
+  color: #ac7382;
+  padding: 5px 40px;
+  border: none;
+}
+.container > #sidebar > .modal > .choose-player-1 > button,
+.container > #sidebar > .modal > .choose-player-2 > button {
+  padding: 25px;
+  border-radius: 100px;
+  border: transparent;
+  background-color: rgb(86, 82, 77);
+  color: #f2f2f2;
+  font-size: 1.2rem;
+  padding-top: 6px;
+  padding-bottom: 6px;
+  font-weight: 800;
+  transition: background-color 0.005s ease-in, color 0.05s ease-in-out;
+}
+.container > #sidebar > .modal > .choose-player-1 > button:hover,
+.container > #sidebar > .modal > .choose-player-2 > button:hover {
+  background-color: #a4a1a1;
+  color: #000000;
+}
+.container > #sidebar > .modal > .choose-player-1 > button.active,
+.container > #sidebar > .modal > .choose-player-2 > button.active{
+  background-color: #a4a1a1;
+  color: #000000;
+}
+.container > #sidebar > .modal {
+  padding: 45px;
+  margin-top: 15vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 3ch;
+}
+.container > #sidebar > .modal > input {
+  margin-top: 15px;
+  margin-bottom: 1px;
+  border-radius: 45px;
+  font-size: 1.5rem;
+  padding: 4px 10px;
+  text-align: start;
+  border: transparent;
+  background-color: #81f8f0;
+}
+.container > #sidebar > .modal > .choose-player-1,
+.container > #sidebar > .modal > .choose-player-2 {
+  width: 20ch;
+  display: flex;
+  justify-content: space-between;
+  padding: 15px;
+}
+.container > #sidebar > .submit-btn {
+  margin-left: 20ch;
+  margin-right: 20ch;
+  margin-top: 15px;
+  display: flex;
+  justify-content: center;
+}
+.container > #sidebar > .submit-btn > button {
+  border-radius: 30px;
+  padding: 8px 25px;
+  font-size: 3.2ch;
+  border: transparent;
+  background-color: #98a663;
+  color: #f3f3f3;
+  font-weight: 450;
+  transition: background-color 0.15s ease-in-out;
+}
+.container > #sidebar > .submit-btn > button:hover {
+  background-color: #804848;
+}
+.container > #main-section {
+  background-color: red;
+  grid-column: -2/-1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.container > #main-section > #board {
+  display: grid;
+  grid-template-columns: repeat(3, 180px);
+  grid-template-rows: repeat(3, 180px);
+  gap: 5px;
+  margin-bottom: 20px;
+}
+.container > #main-section > .turn-announcement {
+  font-size: 3ch;
+  font-weight: 200;
+  margin-bottom: 30px;
+}
+.cell {
+  width: 175px;
+  height: 175px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 48px;
+  font-weight: bold;
+  background-color: #fff;
+  border: 2px solid rgba(0, 0, 0, 0.2);
+  cursor: pointer;
+}
+.cell:hover {
+  background-color: #f0f0f0;
+}
+
+#endgame {
+  text-align: center;
+}
+
+.container > #main-section > #endgame {
+  display: flex;
+  width: 400px;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.container > #main-section > #endgame > #endgame-msg {
+  margin-bottom: 20px;
+  width: 300px;
+  font-family: 600;
+  font-size: 1.6rem;
+}
+.container > #main-section > #endgame > .endgame-btns > button {
+  padding: 2px 30px;
+  padding-bottom: 5px;
+  margin: 5px;
+  font-size: 1.4rem;
+  border-radius: 30px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.15s ease-in-out, color 0.2s ease-in-out;
+}
+.container > #main-section > #endgame > .endgame-btns > button:hover {
+  background-color: #3e0606;
+  color: #f3f3f3;
+}
+.blur {
+  filter: blur(4px);
+}
+.hidden {
+  display: none;
+}
